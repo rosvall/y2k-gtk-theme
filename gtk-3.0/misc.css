@@ -1,0 +1,70 @@
+window {
+	font-family: initial;
+	font-size: initial;
+}
+
+treeview.view :drop(active) {
+	border: 3px solid green;
+}
+
+:drop(active) {
+	box-shadow: inset 0 0 3px green;
+}
+rubberband {
+	background: alpha(@theme_selected_bg_color_light, 0.1);
+	border: 1px solid @theme_selected_bg_color;
+}
+paned > separator {
+	border-color: green;
+	color: purple;
+	-gtk-icon-source: image(@theme_bg_color);
+	background: none;
+	margin: -10px;
+	padding: 10px;
+	background-clip: padding-box;
+}
+
+/* Shortcut keys */
+.keycap {
+	min-width: 20px;
+	padding: 0 4px 11px 4px;
+
+	background: @theme_base_color;
+
+	border: 1px solid @theme_fg_color;
+	border-radius: 6px;
+	box-shadow: inset 0 -3px 0 3px black, inset  0 -3px 0 2px darker(@theme_bg_color);
+}
+
+.needs-attention > :last-child {
+	background: -gtk-icontheme('emblem-important');
+	background-size: 16px;
+	background-repeat: no-repeat;
+	background-position: right 0, right 0;
+	padding-right: 18px;
+}
+
+scale.color trough {
+	min-width: 4px;
+	min-height: 4px;
+}
+
+#pathbarbox {
+	background: unset;
+	margin: -5px;
+}
+
+colorswatch:selected > overlay:selected {
+	background: unset;
+	text-shadow: 1px 1px @theme_fg_color;
+	-gtk-icon-shadow: 1px 1px 0 @theme_fg_color;
+}
+
+button.popup > :last-child {
+	background:  -gtk-icontheme("pan-down-symbolic");
+	background-size: 12px;
+	background-repeat: no-repeat;
+	background-position: right;
+	padding-right: 12px;
+}
+

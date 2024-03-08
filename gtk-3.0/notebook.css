@@ -1,0 +1,80 @@
+tab {
+	-gtk-icon-style: symbolic;
+	background: @theme_bg_color;
+	outline-offset: -4px;
+	padding: 0;
+}
+
+tab label {
+	margin: 2px;
+}
+
+tabs {
+	margin: 2px;
+}
+
+tab:checked {
+	margin: -2px;
+}
+
+
+/* TOP */ 
+notebook > header.top > tabs {
+	margin-bottom: 0;
+	padding-top: 0;
+}
+notebook > header.top > tabs > tab {
+	border-bottom-color: transparent;
+	border-radius: 3px 5px 0 0;
+	box-shadow: inset  -1px 0px @edge_dark_inner;
+}
+notebook > header.top > tabs > tab:checked {
+	padding-bottom: 3px;
+	margin-bottom: -1px;
+}
+
+
+
+/* BOTTOM */ 
+notebook > header.bottom > tabs {
+	margin-top: 0;
+}
+notebook > header.bottom > tabs > tab {
+	border-top-color: transparent;
+	border-radius: 0 0 3px 5px;
+	box-shadow: inset  -1px -1px @edge_dark_inner;
+}
+notebook > header.bottom > tabs > tab:checked {
+	padding-top: 3px;
+}
+
+/* left */ 
+notebook > header.left > tabs {
+	margin-right: 0;
+}
+notebook > header.left > tabs > tab {
+	border-right-color: transparent;
+	border-radius: 3px 0 0 5px;
+	box-shadow: inset  0px -1px @edge_dark_inner;
+}
+notebook > header.left > tabs > tab:checked {
+	padding-right: 3px;
+}
+
+
+/* right */ 
+notebook > header.right > tabs {
+	margin-left: 0;
+}
+notebook > header.right > tabs > tab {
+	border-left-color: transparent;
+	border-radius:  0 5px 3px 0;
+	box-shadow: inset  -1px -1px @edge_dark_inner;
+}
+notebook > header.right > tabs > tab:checked {
+	padding-left: 3px;
+}
+
+notebook > stack {
+	padding: 2px;
+}

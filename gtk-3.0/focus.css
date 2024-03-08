@@ -1,0 +1,34 @@
+* {
+	outline: 1px dotted CurrentColor;
+	outline-offset: 0px;
+	-gtk-outline-radius: 0px;
+}
+
+combobox button:focus {
+	background: @theme_selected_bg_color;
+	outline-color: @theme_selected_fg_color;
+}
+combobox button:focus cellview {
+	color: @theme_selected_fg_color;
+}
+
+
+
+button {
+	outline-offset: -4px;
+}
+
+tab {
+	outline-offset: -4px;
+}
+
+combobox button, 
+treeview {
+	outline-offset: -1px;
+}
+
+trough {
+	outline-offset: 5px;
+}
+
+

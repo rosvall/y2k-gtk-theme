@@ -1,0 +1,40 @@
+
+window.csd.unified headerbar.titlebar {
+    background: none;
+	padding-right: 1px;
+	padding-left: 1px;
+}
+
+window.csd.unified {
+	background: shade(@theme_bg_color, 0.8);
+	background: linear-gradient(to right, shade(@theme_bg_color, 0.5), @theme_bg_color);
+
+}
+
+window.csd.unified:not(:backdrop) {
+	background: linear-gradient(to right, @theme_selected_bg_color, @theme_selected_bg_color_light);
+}
+
+window.csd.unified headerbar.titlebar ~ * {
+	background: @theme_bg_color;
+	padding: 1px;
+}
+
+window.csd.unified > deck > box {
+	border-style: solid;
+	border-width: 1px;
+	padding: 2px;
+	border-color: @theme_bg_color @shadow @shadow @theme_bg_color; 
+	box-shadow: 
+				inset 0 0 0 2px @theme_bg_color,
+				inset -1px -1px shade(@theme_bg_color, 0.5),
+				inset  1px  1px shade(@theme_bg_color, 1.5);
+}
+
+
+window.csd.unified leaflet > separator {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	opacity: 0;
+}

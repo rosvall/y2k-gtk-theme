@@ -1,0 +1,158 @@
+.gtkstyle-fallback:hover {
+  background-color: blue;
+}
+
+.gtkstyle-fallback:active {
+  background-color: cyan;
+}
+
+.gtkstyle-fallback:disabled {
+  background-color: grey;
+  text-shadow: 1px 1px #eee;
+}
+
+:disabled {
+	text-shadow: 1px 1px @theme_base_color;
+	-gtk-icon-shadow: 1px 1px 0 @theme_base_color;
+	-gtk-icon-effect: dim;
+}
+
+.titlebar {
+	background: shade(@theme_bg_color, 0.8);
+	background: linear-gradient(to right, shade(@theme_bg_color, 0.5), @theme_bg_color);
+}
+.titlebar:not(:backdrop) {
+	background: linear-gradient(to right, @theme_selected_bg_color, @theme_selected_bg_color_light);
+}
+
+
+.background,
+decoration,
+.gtkstyle-fallback,
+window,
+separator,
+button,
+border,
+slider,
+combobox arrow,
+calendar.header,
+.osd,
+scrollbar {
+	background: @theme_bg_color;
+}
+
+
+.suggested-action {
+	background-color: @success_color;
+}
+
+.destructive-action {
+	background-color: @warning_color;
+}
+.error {
+	background-color: @warning_color;
+}
+
+
+tooltip > decoration,
+tooltip.background,
+.info, 
+infobar {
+	background: @tooltip_bg;
+}
+
+
+trough:disabled block.filled:disabled,
+scale trough,
+trough highlight:disabled {
+	background: darker(@theme_bg_color);
+}
+
+
+:selected,
+.view:selected,
+selection,
+trough block.filled,
+progress,
+switch:checked,
+menu menuitem:hover,
+.menu modelbutton:hover {
+	background: @theme_selected_bg_color;
+}
+
+entry progress {
+	border-bottom: 2px solid alpha(@theme_selected_bg_color, 0.8);
+	background: none;
+}
+
+
+:backdrop > :selected,
+:backdrop > .view:selected,
+:backdrop > selection,
+:backdrop > switch:checked {
+	background: darker(@theme_bg_color);
+}
+
+
+
+
+button.flat,
+combobox button,
+stacksidebar row:selected {
+	background: unset;
+}
+
+/* WHITE background */
+.view,
+entry,
+iconview,
+combobox,
+radio,
+check,
+list,
+#gtk-combobox-popup-menu,
+trough,
+switch,
+trough fill,
+paper {
+	background: @theme_base_color;
+}
+
+.view:disabled,
+entry:disabled,
+iconview:disabled,
+combobox:disabled,
+radio:disabled,
+check:disabled,
+list:disabled,
+trough:disabled,
+switch:disabled,
+trough fill:disabled {
+	background: @theme_bg_color;
+}
+
+
+stacksidebar list,
+calendar.highlight {
+	background: darker(@theme_bg_color);
+}
+
+
+button:checked,
+menubar > menuitem:hover,
+scrollbar trough {
+	background: unset;
+	background-image: url("assets/checkerboard_white.png");
+}
+
+slider:disabled {
+	background: unset;
+	background-blend-mode: overlay;
+	background-image: image(@theme_bg_color), url("assets/checkerboard_white.png");
+}
+
+
+.app-notification {
+	background: @info_color;
+}
+

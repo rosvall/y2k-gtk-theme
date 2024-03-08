@@ -1,0 +1,117 @@
+
+* {
+/* CALENDAR */
+	 /* Inner border space */
+	-GtkCalendar-inner-border: 0;
+	 /* Space between day headers and main area */
+	-GtkCalendar-vertical-separation: 0;
+	 /* Space between week headers and main area */
+	-GtkCalendar-horizontal-separation: 0;
+
+/* ENTRY */
+	 /* The character to use when masking entry contents in "password mode" 
+	-GtkEntry-invisible-char: x;
+	*/
+
+/* COMBOBOX */
+	 /* Whether dropdowns should look like lists rather than menus */
+	-GtkCombobox-appears-as-list: 1;
+
+/* DIALOG */
+	 /* Width of border around the main dialog area */
+	-GtkDialog-content-area-border: 0;
+	 /* Spacing between elements of the main dialog area */
+	-GtkDialog-content-area-spacing: 0;
+	 /* Spacing between buttons */
+	-GtkDialog-button-spacing: 0;
+	 /* Width of border around the button area at the bottom of the dialog */
+	-GtkDialog-action-area-border: 0;
+
+/* TREEVIEW */
+	 /* Size of the expander arrow */
+	-GtkTreeview-expander-size: 9;
+	 /* Vertical space between cells.  Must be an even number */
+	-GtkTreeview-vertical-separator: 0;
+	 /* Horizontal space between cells.  Must be an even number */
+	-GtkTreeview-horizontal-separator: 0;
+	 /* Allow drawing of alternating color rows */
+	-GtkTreeview-allow-rules: 1;
+	 /* Make the expanders indented */
+	-GtkTreeview-indent-expanders: 0;
+	 /* Width in pixels of the tree view grid lines */
+	-GtkTreeview-grid-line-width: 3;
+	 /* Width in pixels of the tree view lines */
+	-GtkTreeview-tree-line-width: 3;
+	 /* Dash pattern used to draw the tree view grid lines */
+	-GtkTreeview-grid-line-pattern: '\4\2';
+	 /* Dash pattern used to draw the tree view lines */
+	-GtkTreeview-tree-line-pattern: '\4\6';
+
+/* WINDOW */
+	 /* Decoration resize handle size */
+	-GtkWindow-decoration-resize-handle: 20;
+
+/* MESSAGEDIALOG */
+	 /* Width of border around the label in the message dialog */
+	-GtkMessageDialog-message-border: 4;
+
+/* SCROLLEDWINDOW */
+	 /* Number of pixels between the scrollbars and the scrolled window */
+	-GtkScrolledWindow-scrollbar-spacing: 0;
+
+/* TEXTVIEW */
+	 /* Color with which to draw error-indication underlines */
+	-GtkTextView-error-underline-color: red;
+
+/* MENU */
+	 /* When the menu is a submenu position it this number of pixels offset vertically */
+	-GtkMenu-vertical-offset: 0;
+	 /* When the menu is a submenu position it this number of pixels offset horizontally */
+	-GtkMenu-horizontal-offset: -2;
+
+/* TOOLBAR */
+	 /* Maximum amount of space an expandable item will be given 
+	-GtkToolbar-max-child-expand: G_MAXINT;*/
+	 /* Type of bevel around toolbar buttons 
+	-GtkToolbar-button-relief: GTK_RELIEF_NONE;*/
+
+/* NOTEBOOK */
+	 /* Display a second backward arrow button on the opposite end of the tab area */
+	-GtkNotebook-has-secondary-backward-stepper: 0;
+	 /* Display a second forward arrow button on the opposite end of the tab area */
+	-GtkNotebook-has-secondary-forward-stepper: 0;
+	 /* Display the standard backward arrow button */
+	-GtkNotebook-has-backward-stepper: 1;
+	 /* Display the standard forward arrow button */
+	-GtkNotebook-has-forward-stepper: 1;
+
+/* SCROLLBAR */
+	 /* Don't change slider size, just lock it to the minimum length */
+	-GtkScrollbar-fixed-slider-length: 0;
+	 /* Display the standard backward arrow button */
+	-GtkScrollbar-has-backward-stepper: 0;
+	 /* Display the standard forward arrow button */
+	-GtkScrollbar-has-forward-stepper: 0;
+	 /* Display a second backward arrow button on the opposite end of the scrollbar */
+	-GtkScrollbar-has-secondary-backward-stepper: 0;
+	 /* Display a second forward arrow button on the opposite end of the scrollbar */
+	-GtkScrollbar-has-secondary-forward-stepper: 0;
+
+/* TOOLBUTTON */
+	 /* Spacing in pixels between the icon and label */
+	-GtkToolButton-icon-spacing: 1;
+
+/* TOOLITEMGROUP */
+	 /* Size of the expander arrow */
+	-GtkToolItemGroup-expander-size: 10;
+	 /* Spacing between expander arrow and caption */
+	-GtkToolItemGroup-header-spacing: 2;
+
+}
+
+menubar,
+toolbar,
+searchbar,
+infobar {
+  -GtkWidget-window-dragging: true;
+}

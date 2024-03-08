@@ -1,0 +1,44 @@
+/* Just remove everything inside a switch */
+switch > slider,
+switch > image,
+switch:disabled > image,
+switch:disabled > slider,
+switch:hover > image,
+switch:hover > slider {
+	all: unset;
+	min-width: 1px;
+	min-height: 1px;
+	margin: -10px;
+	color: transparent;
+	background: transparent;
+	margin-top: 100px;
+	margin-bottom: -110px;
+}
+
+switch {
+	padding: 0;
+	background-blend-mode: overlay;
+	background-size: 12px;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 5px 0;
+}
+
+switch:checked,
+switch:checked:backdrop {
+	color: @theme_fg_color;
+	background: image(@theme_base_color), -gtk-icontheme("object-select-symbolic");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+switch:disabled:checked {
+	color: shade(@theme_bg_color, 0.25);
+	text-shadow: 1px 1px @theme_base_color;
+	-gtk-icon-shadow: 1px 1px 0 @theme_base_color;
+	opacity: 1;
+	background: image(@theme_bg_color), -gtk-icontheme("object-select-symbolic");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+

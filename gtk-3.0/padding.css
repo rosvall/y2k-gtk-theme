@@ -1,0 +1,88 @@
+* {
+	padding: 0;
+}
+
+menubar > menuitem,
+.menu modelbutton,
+combobox,
+spinbutton,
+calendar,
+scrolledwindow,
+button,
+trough,
+radio,
+switch,
+sidebar,
+.sidebar,
+#xfce4-terminal-notebook stack box,
+.menubutton,
+row.activatable {
+	padding: 1px;
+}
+
+entry {
+	padding: 1px 2px;
+}
+
+button:checked,
+button:active,
+menubar > menuitem:hover,
+button.flat:checked,
+button.flat:active,
+stacksidebar row:selected {
+	padding: 2px 0 0 2px;
+}
+
+spinbutton button,
+spinbutton button:checked,
+spinbutton button:active,
+combobox entry,
+combobox button,
+combobox button:active,
+combobox button:checked {
+	padding: 0;
+}
+
+notebook stack:only-child {
+	padding: 0;
+}
+
+scrollbar, 
+scrollbar * {
+	padding: 0;
+}
+
+.sidebar > label {
+	padding: 6px;
+}
+
+decoration {
+	padding: 2px; /* Used to draw the window border on */
+}
+
+combobox > window > decoration {
+	padding: 0;
+}
+
+
+/* Icons on combobox button and spinbuttons just gets translation when active to avoid padding */
+combobox button:checked arrow,
+spinbutton button:active  {
+	-gtk-icon-transform: translate(1px, 1px);
+}
+
+
+/* Ugh */
+calendar {
+	padding: 2px;
+}
+calendar * {
+	padding: 1px;
+}
+
+
+
+
+.app-notification {
+	padding: 10px;
+}

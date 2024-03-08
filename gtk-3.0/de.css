@@ -1,0 +1,37 @@
+
+.panel progressbar trough {
+	border: 1px inset darker(@theme_bg_color);
+	box-shadow: none;
+	padding: 0;
+	min-height: 4px;
+}
+
+.panel .minimized {
+	-gtk-icon-effect: dim;
+	-gtk-icon-shadow: 1px 1px white;
+}
+
+.panel .label-hidden {
+	opacity: 1;
+	color: #555;
+	text-shadow: 1px -1px white;
+}
+
+#XfceNotifyWindow  {
+	border: none;
+	box-shadow:none;
+	background: none;
+}
+#XfceNotifyWindow > * {
+	box-shadow: 1px 1px 3px -2px black;
+	border: 1px solid black;
+	border-radius: 3px;
+	padding: 1px;
+	background: @tooltip_bg;
+	margin: -10px;
+	padding: 3px;
+}
+
+#XfceNotifyWindow #summary {
+    font-weight: bold;
+}

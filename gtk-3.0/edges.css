@@ -1,0 +1,281 @@
+@define-color edge_light_outer	@highlight;
+@define-color edge_light_inner	alpha(@highlight, 0.2);
+@define-color edge_dark_inner	alpha(@shadow, 0.5);
+@define-color edge_dark_outer	@shadow;
+
+/*
+* BUTTONS, ETC
+*/
+button,
+.combo arrow,
+notebook > stack,
+notebook > header > tabs > tab,
+slider {
+	border-style: solid;
+	border-width: 1px;
+	border-color: @edge_light_outer @edge_dark_outer @edge_dark_outer @edge_light_outer;
+	box-shadow: inset  -1px  -1px @edge_dark_inner;
+}
+
+
+button.default {
+	border-style: solid;
+	border-width: 1px;
+	border-color: @edge_light_outer @edge_dark_outer @edge_dark_outer @edge_light_outer;
+	box-shadow: inset  -1px  -1px @edge_dark_inner, 
+				0 0 0 1px @shadow;
+}
+
+
+/*
+* EXCEPT
+*/
+button.flat,
+notebook > stack:only-child,
+combobox button.combo,
+combobox button.combo:active,
+combobox button.combo:checked{
+	border: unset;
+	box-shadow: unset;
+}
+
+/*
+* Button on white theme_bg_color needs a slight adjustment of the light border
+*/
+
+.view button,
+entry button,
+.combo arrow,
+scrollbar button,
+scrollbar slider {
+	border-style: solid;
+	border-width: 1px;
+	border-color: @theme_bg_color @edge_dark_outer @edge_dark_outer @theme_bg_color;
+	box-shadow: inset  1px  1px @edge_light_outer,
+				inset -1px -1px @edge_dark_inner;
+}
+
+.csd > decoration,
+popover,
+.osd,
+.popover,
+.menu {
+	border-style: solid;
+	border-width: 1px;
+	border-color: @theme_bg_color @edge_dark_outer @edge_dark_outer @theme_bg_color;
+	box-shadow: inset  1px  1px @edge_light_outer,
+				inset -1px -1px @edge_dark_inner,
+				 3px 3px 4px @shadow;
+}
+
+tooltip > window > decoration, 
+combobox > window.popup > decoration,
+paper {
+	border: 1px solid @shadow;
+	box-shadow: 3px 3px 4px @shadow;
+}
+
+.app-notification {
+	box-shadow: 2px 2px 5px @shadow;
+}
+
+/* Spinbutton buttons get NO border. They take up enough space as it is. */
+spinbutton button,
+spinbutton button:checked,
+spinbutton button:active {
+	border:none;
+	box-shadow: inset 2px 2px @edge_light_outer,
+				inset 1px 1px @theme_bg_color,
+				inset -2px -2px @edge_dark_inner,
+				inset -1px -1px @edge_dark_outer;
+}
+
+/*
+* CLICKED, CHECKED BUTTONS
+*/
+
+button:active,
+button.combo:checked arrow
+{
+	border: 1px solid darker(@theme_bg_color);
+	box-shadow: none;
+}
+
+
+
+/* Spinbutton buttons get NO border. They take up enough space as it is. */
+spinbutton button:checked,
+spinbutton button:active {
+	border:none;
+	box-shadow: inset 0 0 0 1px @edge_dark_inner;
+			
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+* INSET stuff, ENTRY, etc.
+*/
+
+combobox,
+check,
+radio,
+spinbutton,
+view,
+scrolledwindow,
+button:checked,
+calendar.view,
+entry,
+trough,
+switch,
+sidebar,
+#xfce4-terminal-notebook stack box,
+.sidebar {
+	border-style: solid;
+	border-color: @edge_dark_inner @edge_light_outer @edge_light_outer @edge_dark_inner ;
+	box-shadow: inset 0 0 0 1px @theme_bg_color,
+				inset 1px 1px @edge_dark_outer;
+	border-width: 1px;
+}
+
+radio {
+	border-radius: 100%;
+}
+
+combobox entry,
+spinbutton entry,
+scrollbar trough {
+	border: unset;
+	box-shadow: unset;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+*  FLAT buttons
+*/
+button.flat,
+expander > title,
+toolbar button,
+.inline-toolbar button,
+menubar > menuitem,
+stacksidebar row {
+	border: 1px solid transparent;
+	box-shadow: none;
+}
+
+button.flat:hover,
+expander > title:hover,
+row.activatable:hover,
+toolbar button:hover,
+.inline-toolbar button:hover,
+stacksidebar row:hover{
+	border-color:  @edge_light_outer @edge_dark_inner @edge_dark_inner @edge_light_outer;
+	-gtk-icon-effect: highlight;
+}
+
+button.flat:checked,
+button.flat:active,
+expander > title:not(:only-child),
+toolbar button:checked,
+toolbar button:active,
+.inline-toolbar button:checked,
+.inline-toolbar button:active,
+menubar > menuitem:hover,
+stacksidebar row:selected {
+	border-color: @edge_dark_inner  @edge_light_outer @edge_light_outer @edge_dark_inner ;
+	box-shadow: none;
+}
+
+
+
+
+
+
+/*
+* 1px INSET stuff
+*/
+statusbar frame border,
+.border-inset border,
+:not(button) > colorswatch,
+:not(paned):not(list) > separator {
+	border-bottom: 1px solid @edge_light_outer;
+	border-right: 1px solid @edge_light_outer;
+	border-top: 1px solid @edge_dark_inner;
+	border-left: 1px solid @edge_dark_inner;
+}
+
+.titlebar separator,
+separator.sidebar {
+	border: none;
+	box-shadow: none;
+}
+
+	
+/*
+* 1px OUTSET
+*/
+.border-outset border
+{
+	border-bottom: 1px solid @edge_dark_inner;
+	border-right: 1px solid @edge_dark_inner;
+	border-top: 1px solid @edge_light_outer;
+	border-left: 1px solid @edge_light_outer;
+}
+
+toolbar,
+.inline-toolbar,
+menubar,
+searchbar,
+.border-groove border {
+	border: 2px groove darker(@theme_bg_color);
+}
+
+.border-ridge border {
+	border: 2px ridge darker(@theme_bg_color);
+}
+
+/* Treeview lines */
+treeview.view {
+	/* This is the tree line color*/
+	border-left-color:  darker(@theme_bg_color);
+	/* And this is grid line color */
+	border-top-color: @theme_bg_color;
+}
+
+/*
+* Merge borders on adjacent *bars
+*/
+menubar + toolbar,
+toolbar + toolbar,
+toolbar + searchbar,
+toolbar + infobar {
+	border-top: none;
+}
+
+headerbar {
+	border-bottom: 2px solid @theme_bg_color;
+}

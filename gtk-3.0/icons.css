@@ -1,0 +1,87 @@
+window, dialog, menu {
+	-gtk-icon-style: regular;
+}
+
+.titlebar button image,
+radio,
+check,
+spinbutton,
+arrow,
+scrollbar {
+	-gtk-icon-style: symbolic;
+}
+
+check:checked {
+	-gtk-icon-source: -gtk-icontheme("object-select-symbolic");
+}
+
+radio:checked {
+	-gtk-icon-source: -gtk-icontheme("media-record-symbolic");
+}
+
+:indeterminate {
+	-gtk-icon-source: -gtk-icontheme('content-loading-symbolic');
+}
+
+.expander,
+expander arrow {
+	-gtk-icon-source: url("assets/tree-plus.png");
+}
+
+.expander:checked,
+expander arrow:checked {
+	-gtk-icon-source: url("assets/tree-minus.png");
+}
+
+combobox arrow {
+	-gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+}
+
+spinbutton button.up,
+header.left > tabs > arrow.down,
+header.right > tabs > arrow.down,
+arrow.up,
+scrollbar.vertical button.up {
+	-gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
+}
+
+arrow.down,
+header.left > tabs > arrow.up,
+header.right > tabs > arrow.up,
+scrollbar.vertical button.down {
+	-gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+}
+
+
+arrow.left,
+header.top > tabs > arrow.down,
+header.bottom > tabs > arrow.down,
+scrollbar.horizontal button.up {
+	-gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
+}
+
+
+arrow.right,
+header.top > tabs > arrow.up,
+header.bottom > tabs > arrow.up,
+scrollbar.horizontal button.down {
+	-gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+}
+
+/*********************
+ * Spinner Animation *
+ *********************/
+@keyframes spin {
+	to { -gtk-icon-transform: rotate(1turn); }
+}
+spinner {
+	background-color: transparent;
+	opacity: 0;
+}
+spinner:checked {
+	opacity: 1;
+	animation: spin 1s linear infinite;
+}
+spinner:disabled {
+	animation: none;
+}

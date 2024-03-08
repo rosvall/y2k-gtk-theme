@@ -1,0 +1,95 @@
+window,
+.background,
+.gtkstyle-fallback{
+	color: @theme_fg_color;
+}
+
+:disabled {
+	color: shade(@theme_bg_color, 0.5);
+	text-shadow: 1px 1px @theme_base_color;
+	-gtk-icon-shadow: 1px 1px 0 @theme_base_color;
+	-gtk-icon-effect: dim;
+}
+
+:hover {
+}
+
+:active {
+}
+
+:selected,
+.view:selected,
+.gtkstyle-fallback:selected,
+selection,
+.titlebar:not(:backdrop) .title,
+.titlebar:not(:backdrop) .subtitle,
+stacksidebar list,
+calendar.highlight,
+switch:checked,
+menu menuitem:hover,
+.menu modelbutton:hover {
+	color: @theme_selected_fg_color;
+}
+
+
+
+.titlebar .title,
+.titlebar .subtitle {
+	color: @theme_bg_color;
+}
+
+/* WHITE background */
+.view,
+entry,
+iconview,
+combobox,
+radio,
+check,
+list,
+#gtk-combobox-popup-menu,
+trough,
+switch,
+tooltip,
+paper {
+	color: @theme_text_color;
+}
+
+menu label accelerator {
+	color: darker(@theme_bg_color);
+}
+
+link,
+.link,
+.link *
+{
+	color: @link;
+	text-decoration: underline;
+}
+
+
+
+button.flat,
+combobox button,
+stacksidebar row:selected {
+	color: inherit;
+}
+
+
+scale mark indicator {
+	color: @theme_fg_color;
+}
+
+
+
+
+
+button:checked,
+menubar > menuitem:hover,
+scrollbar trough {
+	background-image: url("assets/checkerboard_white.png");
+}
+
+.dim-label {
+	color: shade(@theme_bg_color, 0.5);
+}
+
